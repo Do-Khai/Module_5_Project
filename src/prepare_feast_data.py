@@ -2,7 +2,7 @@ import pandas as pd
 from datetime import datetime
 
 # Đọc dữ liệu đã xử lý
-df = pd.read_csv('data/processed/processed_train.csv')
+df = pd.read_csv('data/processed/processed_data.csv')
 
 # Feast yêu cầu cột timestamp và cột entity
 # Chúng ta sẽ dùng 'Id' làm entity 'house_id'

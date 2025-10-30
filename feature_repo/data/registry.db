@@ -1,0 +1,42 @@
+
+C
+#
+__dummy"
+__dummy_idJhouse_prices
+€Æ‹È°¶½Ê€Æ‹È°¶½Ê
+U
+5
+house_idID of the house"house_idJhouse_prices
+€Æ‹È¸×¿Ê€Æ‹È¸×¿Ê1"$bc6b0f61-8257-47f6-9a9e-831f79518e21*€Æ‹ÈÐ¨ÌÊ2­
+Œ
+house_featureshouse_priceshouse_id"
+
+MSSubClass"
+MSZoning"
+LotFrontage"
+LotArea"
+
+Street"
+OverallQual"
+OverallCond"
+	YearBuilt"
+YearRemodAdd"
+TotalBsmtSF"
+	GrLivArea"
+FullBath"
+BedroomAbvGr"
+TotRmsAbvGrd"
+
+GarageCars"
+
+GarageArea"
+	SalePrice*
+teamsales_prediction2€†°–:£event_timestampZdata/house_features.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/house_features.parquet’€Æ‹È¸ûÔ¿"€Æ‹ÈÐá¹Ê@b
+house_id
+€Æ‹ÈðèÁÊ€Æ‹ÈðèÁÊRŸ
+œ
+,feast.infra.online_stores.sqlite.SqliteTable"l
+M/Users/hoangdokhai/AIO2025/Module 5/Project/feature_repo/data/online_store.dbhouse_prices_house_featuresb²event_timestampZdata/house_features.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/house_features.parquetªhouse_prices’€Æ‹È¸ûÔ¿"€Æ‹ÈÐá¹ÊŠ.
+
+house_prices
+€Æ‹Èˆ–û¿€Æ‹Èˆ–û¿

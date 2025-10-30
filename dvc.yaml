@@ -6,3 +6,16 @@ stages:
     - data/raw/data.csv
     outs:
     - data/processed/processed_data.csv
+  train_poly:
+    cmd: python src/train_poly.py
+    deps:
+    - src/train_poly.py
+    - data/processed/processed_data.csv
+    params:
+    - training
+    - model_poly
+    outs:
+    - models/model_poly.joblib
+    metrics:
+    - models/metrics_poly.json:
+        cache: false

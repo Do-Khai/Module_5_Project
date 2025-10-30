@@ -9,6 +9,9 @@ def process_data(raw_data_path, processed_data_path):
     """
     df = pd.read_csv(raw_data_path)
 
+    # Loại bỏ các cột không cần thiết hoặc có quá nhiều giá trị thiếu
+    df = df.drop(["Alley", "PoolQC", "Fence", "MiscFeature"], axis=1)
+
     # Xử lý giá trị thiếu đơn giản (dựa trên notebook của bạn)
     # Các cột số: điền bằng giá trị trung bình
     num_cols_with_na = df.select_dtypes(include=np.number).columns[df.select_dtypes(include=np.number).isnull().any()]
@@ -19,7 +22,7 @@ def process_data(raw_data_path, processed_data_path):
     obj_cols_with_na = df.select_dtypes(include='object').columns[df.select_dtypes(include='object').isnull().any()]
     for col in obj_cols_with_na:
         # Các cột này giá trị NA có ý nghĩa là "không có"
-        if col in ['Alley', 'BsmtQual', 'BsmtCond', 'BsmtExposure', 'BsmtFinType1', 'BsmtFinType2', 'FireplaceQu', 'GarageType', 'GarageFinish', 'GarageQual', 'GarageCond', 'PoolQC', 'Fence', 'MiscFeature']:
+        if col in ['BsmtQual', 'BsmtCond', 'BsmtExposure', 'BsmtFinType1', 'BsmtFinType2', 'FireplaceQu', 'GarageType', 'GarageFinish', 'GarageQual', 'GarageCond']:
             df[col].fillna('None', inplace=True)
         else: # Các cột khác điền bằng mode
             df[col].fillna(df[col].mode()[0], inplace=True)

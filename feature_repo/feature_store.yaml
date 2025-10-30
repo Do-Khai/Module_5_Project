@@ -1,0 +1,8 @@
+project: house_prices
+registry: data/registry.db # Nơi Feast lưu metadata
+provider: local # Dùng môi trường local
+online_store: # Nơi lưu feature cho dự đoán real-time (không dùng trong notebook này)
+    type: sqlite
+    path: data/online_store.db
+offline_store: # Nơi lưu feature cho huấn luyện (dữ liệu lịch sử)
+    type: file
