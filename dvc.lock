@@ -10,10 +10,37 @@ stages:
       size: 460676
     - path: src/process_data.py
       hash: md5
-      md5: bb9958e4f91a3a6325a61fe5c84d5945
-      size: 1824
+      md5: 347d485cf06b3f8e59abd40036eb1f81
+      size: 1945
     outs:
     - path: data/processed/processed_data.csv
       hash: md5
-      md5: 85d20c4787533f03f49ca7a64badad93
-      size: 489900
+      md5: 1d022b1f5e1de29d3a456c26169847e9
+      size: 460467
+  train_poly:
+    cmd: python src/train_poly.py
+    deps:
+    - path: data/processed/processed_data.csv
+      hash: md5
+      md5: 1d022b1f5e1de29d3a456c26169847e9
+      size: 460467
+    - path: src/train_poly.py
+      hash: md5
+      md5: 44bdcec267f0f0f5364c7f74a5eb4ecc
+      size: 3856
+    params:
+      params.yaml:
+        model_poly:
+          degree: 2
+        training:
+          test_size: 0.2
+          random_state: 42
+    outs:
+    - path: models/metrics_poly.json
+      hash: md5
+      md5: 76d0a1f7a9a233edea88ea94f3550ca5
+      size: 96
+    - path: models/model_poly.joblib
+      hash: md5
+      md5: 72d8352b6b742580fa6739f85733e7ba
+      size: 348932
