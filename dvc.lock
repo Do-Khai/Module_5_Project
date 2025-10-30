@@ -1,0 +1,19 @@
+schema: '2.0'
+stages:
+  process_data:
+    cmd: python src/process_data.py data/raw/data.csv 
+      data/processed/processed_data.csv
+    deps:
+    - path: data/raw/data.csv
+      hash: md5
+      md5: 80ccab65fb115cbad143dbbd2bcd5577
+      size: 460676
+    - path: src/process_data.py
+      hash: md5
+      md5: bb9958e4f91a3a6325a61fe5c84d5945
+      size: 1824
+    outs:
+    - path: data/processed/processed_data.csv
+      hash: md5
+      md5: 85d20c4787533f03f49ca7a64badad93
+      size: 489900
