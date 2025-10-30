@@ -135,7 +135,7 @@ Sau khi pipeline dữ liệu và feature store đã sẵn sàng, bạn có thể
 - **`train_poly`**: Stage này nhận dữ liệu đã xử lý và file `params.yaml` làm đầu vào, chạy `src/train_poly.py` để huấn luyện mô hình, và cho ra model artifact (`models/model_poly.joblib`) cùng file metrics (`models/metrics_poly.json`).
 
 ### Feast Feature Store (`feature_repo/`)
-- **`house_features.py`**: Định nghĩa `feature_view` cho các đặc trưng của ngôi nhà, với `house_id` là entity.
+- **`features.py`**: Định nghĩa `feature_view` cho các đặc trưng của ngôi nhà, với `house_id` là entity.
 - **`feature_store.yaml`**: Cấu hình provider là `local` để lưu trữ dữ liệu feature store trên máy.
 
 ### Training Scripts (`src/`)
